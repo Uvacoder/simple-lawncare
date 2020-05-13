@@ -200,7 +200,13 @@ nav {
 nav li { margin: 0 12px; }
 nav a { color: #fff; }
 nav a.active { color: #fbd341; }
-nav a:hover:not(.active) { text-decoration: underline; }
+
+nav a:hover:not(.active) {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #fbd341;
+  margin-bottom: -8px;
+  transition: .2s;
+}
 
 /*=================================
   Header styling ends here
@@ -341,7 +347,11 @@ h2 {
   flex-wrap: wrap;
 }
 
-.welcome-flexbox { width: 50%; }
+.welcome-flexbox {
+  width: 50%;
+  margin: auto 0;
+}
+
 .welcome-image figure { position: relative; }
 
 .see-more {
@@ -564,8 +574,154 @@ h2 {
 
 /* Blogs Section */
 .blogs {
-  padding: 24px 0;
+  padding: 32px 0 57px 0;
   background-color: #f8f9fa;
+  text-align: center;
+}
+
+.blogs h3 {
+  margin: 8px 0;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.blogs > .wrapper > p {
+  padding-top: 46px;
+  color: #4e9525;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.blog-flex {
+  width: 100%;
+  padding: 43px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-flexbox { width: 33.33%; }
+
+.blog-flexbox figure {
+  margin: 0 12px;
+  position: relative;
+}
+
+.blog-flexbox img { max-width: 100%; }
+
+.blog-date {
+  padding: 6px 12px 4px 12px;
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  background-color: #4e9525;
+  color: #fff;
+  font-size: 30px;
+}
+
+.blog-year,
+.blog-month {
+  padding: 1px 0;
+  display: block;
+  font-size: 11px;
+}
+
+.blog-date .text {
+  padding-left: 4px;
+  float: right;
+  text-align: left;
+}
+
+.bottom-arrow {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 25px;
+  bottom: -5px;
+  background-color: #4e9525;
+  transform: rotate(45deg);
+}
+
+.bottom-arrow span { display: none; }
+
+.blog-content {
+  padding: 22px 12px 24px 12px;
+  margin: 0 12px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.blog-content p {
+  padding: 12px 0;
+  font-size: 13px;
+  font-weight: 100;
+  color: rgba(0, 0, 0, .5);
+  line-height: 1.4;
+}
+
+.blog-content a {
+  padding: 8px 10px;
+  border-radius: 2px;
+  background-color: #4e9525;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.blog-content a:hover {
+  border: 2px solid #4e9525;
+  margin: -2px;
+  background-color: transparent;
+  color: #4e9525;
+  transition: .2s;
+}
+
+/* Newsletter Section */
+.newsletter {
+  padding: 18px 0;
+  background-color: #4e9525;
+  color: #fff;
+}
+
+.newsletter-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter-flexbox {
+  width: 50%;
+  margin: auto 0;
+}
+
+.newsletter h3 {
+  margin-right: 40px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.newsletter input {
+  padding: 10px 8px;
+  margin-left: 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 10px 8px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  margin-left: -4px;
+  background-color: #3b6d1d;
+  color: #fff;
+}
+
+.newsletter button:hover {
+  background-color: #4d4d4d;
+  transition: .2s;
 }
 
 /*=================================
@@ -576,7 +732,118 @@ h2 {
   footer styling starts here
 =================================*/ 
 
+footer {
+  padding: 60px 0 30px 0;
+  background-color: #252525;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+}
 
+footer a { color: #fff; }
+
+.footer-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-flexbox { width: 25%; }
+
+footer figure { margin-right: 12px; }
+
+footer figcaption {
+  padding: 24px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.footer-content h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.footer-content ul { padding: 12px 0; }
+
+.footer-services li {
+  margin: 6px 0;
+  display: block;
+}
+
+.footer-services span {
+  margin-right: 6px;
+  font-size: 10px;
+}
+
+.footer-services {
+  margin-left: 36px;
+  margin-right: 12px;
+}
+
+.contact-info {
+  margin-left: 12px;
+  margin-right: 6px;
+}
+
+.contact-info li {
+  margin: 8px 0;
+  display: block;
+}
+
+.contact-info span {
+  margin-right: 16px;
+  font-size: 10px;
+}
+
+.office-hours { margin-left: 12px; }
+.office-hours li { padding-left: 12px; }
+
+.office-hours p {
+  padding-top: 16px;
+  color: #fbd341;
+}
+
+.office-hours ul {
+  padding-top: 6px;
+  padding-bottom: 0;
+}
+
+.footer-services a:hover,
+.contact-info a[href]:hover {
+  text-decoration: underline;
+  transform: translateX(6px);
+  transition: .2s;
+}
+
+/* Social Links */
+.social-links span { display: none; }
+
+footer .social-links li {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin: 0 3px;
+  background-color: #303030;
+  text-align: center;
+}
+
+footer .social-links a {
+  padding: 6px;
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+footer .social-links a:hover {
+  color: #4e9525;
+  transition: .2s;
+}
+
+/* Copyright Section */
+.copyright {
+  margin: 54px 0 14px 0;
+  text-align: center;
+}
 
  /*=================================
   footer styling ends here
