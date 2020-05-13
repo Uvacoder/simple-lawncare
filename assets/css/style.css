@@ -104,7 +104,7 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
-
+header { position: relative; }
 header span { display: none; }
 
 /* Top Bar */
@@ -189,7 +189,6 @@ header .social-links a:hover {
 /* Nav Bar */
 
 nav {
-  padding: 19px 0 20px 0;
   background-color: #4e9525;
   font-size: 11px;
   font-weight: 600;
@@ -197,6 +196,7 @@ nav {
   text-transform: uppercase;
 }
 
+nav ul { padding: 19px 0 20px 0; }
 nav li { margin: 0 12px; }
 nav a { color: #fff; }
 nav a.active { color: #fbd341; }
@@ -207,6 +207,25 @@ nav a:hover:not(.active) {
   margin-bottom: -8px;
   transition: .2s;
 }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 2px;
+  color: #4e9525;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.hamburger:hover {
+  padding: 4px 8px 2px 8px;
+  border: 2px solid #4e9525;
+  border-radius: 4px;
+  margin: -6px -10px 0 -10px;
+  transition: .2s;
+ }
 
 /*=================================
   Header styling ends here
@@ -352,13 +371,15 @@ h2 {
   margin: auto 0;
 }
 
-.welcome-image figure { position: relative; }
+.welcome-image figure {
+  max-width: 380px;
+  position: relative;
+}
 
 .see-more {
-  margin-top: 4px;
   position: absolute;
   top: 50%;
-  right: -14px;
+  right: -26px;
   transform: translateY(-50%);
 }
 
@@ -429,10 +450,11 @@ h2 {
   border-radius: 50%;
   position: absolute;
   right: -18px;
-  bottom: 7px;
+  top: 50%;
   background-color: #4e9525;
   color: #fff;
   font-size: 10px;
+  transform: translateY(-50%);
 }
 
 .welcome-content li.active { background-color: #4e9525; }
@@ -850,5 +872,116 @@ footer .social-links a:hover {
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1240px starts here*/
+@media only screen and (max-width: 1240px) {
+  .wrapper { width: 75%; }
+  .blog-flexbox { max-width: 246px; }
+}
+
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}  
+@media only screen and (max-width: 995px) {
+  .wrapper { width: 85%; }
+
+  .footer-services,
+  .contact-info,
+  .office-hours {
+    margin: 0 12px;
+  }
+
+  .contact-info span { margin-right: 6px; }
+}
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  .wrapper { width: 90%; }
+  .top-bar { margin: 24px 0; }
+  header .social-links { display: none; }
+  header .search-area { display: none; }
+
+  header .sitelogo {
+    width: 50%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .hamburger { display: block; }
+
+  nav li {
+    padding: 12px 0;
+    display: block;
+    text-align: left;
+  }
+
+  nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s;
+  }
+
+  .care {
+    width: 50%;
+    order: 2;
+  }
+
+  .lawn-services {
+    width: 50%;
+    order: 1;
+  }
+
+  .welcome-flexbox { width: 100%; }
+  .welcome-flexbox figure { margin-left: 24px; }
+  .welcome-content { margin-right: 24px; }
+  .contact-flexbox { width: 100%; }
+  .contact-flexbox:nth-of-type(2) { text-align: start; }
+  .contact-flexbox a { font-size: 24px; }
+  .testimonials-flex { justify-content: center; }
+  .testimonials-flexbox { width: 50%; }
+  .blog-flex { justify-content: center; }
+
+  .blog-flexbox {
+    width: 50%;
+    padding: 12px 0;
+  }
+
+  .newsletter-flexbox { width: 100%; }
+
+  .newsletter h3 { 
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .newsletter input {
+    width: 60%;
+    margin: 0;
+  }
+
+  .footer-flexbox {
+    width: 50%;
+    padding: 24px 0;
+  }
+}
+
+/*media query for 425px starts here*/
+@media only screen and (max-width: 425px) {
+  .wrapper { width: 93%; }
+  h2 { font-size: 32px; }
+
+  .care,
+  .lawn-services {
+    width: 100%;
+  }
+
+  .welcome-image { width: 90%; }
+
+  .welcome-content li {
+    width: 90%;
+    padding-right: 24px;
+  }
+
+  .testimonials-flexbox { width: 100%; }
+  .blog-flexbox { width: 100%; }
+  .footer-flexbox { width: 100%; }
+  footer .social-links { padding-top: 18px; }
+}
