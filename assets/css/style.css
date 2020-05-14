@@ -108,7 +108,7 @@ header { position: relative; }
 header span { display: none; }
 
 /* Top Bar */
-.top-bar { margin: 34px 0 33px 0; }
+.top-bar { padding: 34px 0 33px 0; }
 
 .top-flex {
   width: 100%;
@@ -213,19 +213,11 @@ nav a:hover:not(.active) {
   display: none;
   position: absolute;
   right: 32px;
-  top: 2px;
+  top: 26px;
   color: #4e9525;
   cursor: pointer;
   font-size: 24px;
 }
-
-.hamburger:hover {
-  padding: 4px 8px 2px 8px;
-  border: 2px solid #4e9525;
-  border-radius: 4px;
-  margin: -6px -10px 0 -10px;
-  transition: .2s;
- }
 
 /*=================================
   Header styling ends here
@@ -746,6 +738,26 @@ h2 {
   transition: .2s;
 }
 
+/* To the top Section */
+.to-the-top {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+}
+
+.to-the-top button {
+  padding: 12px;
+  border: 2px solid #fff;
+  background-color: #4e9525;
+  color: #fff;
+  font-size: 24px;
+  outline: none;
+}
+
+.to-the-top button:hover { box-shadow: 0 1px 5px #fbd341; }
+.to-the-top span { display: none; }
+
 /*=================================
   main styling ends here
 =================================*/
@@ -894,9 +906,9 @@ footer .social-links a:hover {
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
   .wrapper { width: 90%; }
-  .top-bar { margin: 24px 0; }
+  .top-bar { padding: 24px 0; }
   header .social-links { display: none; }
-  header .search-area { display: none; }
+  header .search-area {  margin-right: 54px; }
 
   header .sitelogo {
     width: 50%;
@@ -918,6 +930,8 @@ footer .social-links a:hover {
     overflow: hidden;
     transition: .2s;
   }
+
+  .to-the-top button { font-size: 16px; }
 
   .care {
     width: 50%;
@@ -966,6 +980,9 @@ footer .social-links a:hover {
 /*media query for 425px starts here*/
 @media only screen and (max-width: 425px) {
   .wrapper { width: 93%; }
+  header .search-area { display: none; }
+  .hamburger { right: 20px; }
+  .to-the-top button { font-size: 12px; }
   h2 { font-size: 32px; }
 
   .care,
