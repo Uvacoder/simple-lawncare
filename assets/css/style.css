@@ -198,19 +198,19 @@ nav a:hover:not(.active) {
 =================================*/
 
 /* Banner Section */
-.banner {
+.home-banner {
   background-image: url('https://via.placeholder.com/1920x1080/454545/454545?text=Banner');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.banner-content {
+.home-banner .banner-content {
   padding: 212px 0 220px 0;
   color: #fff;
 }
 
-.banner-content p:nth-of-type(1) {
+.home-banner .banner-content p:nth-of-type(1) {
   color: #fbd341;
   font-size: 11px;
   font-weight: 600;
@@ -224,12 +224,12 @@ h2 {
   font-weight: 600;
 }
 
-.banner-content p:nth-of-type(2) {
+.home-banner .banner-content p:nth-of-type(2) {
   padding-bottom: 17px;
   font-size: 14px;
 }
 
-.banner-content a {
+.home-banner .banner-content a {
   padding: 8px 19px;
   border-radius: 2px;
   background-color: #4e9525;
@@ -237,14 +237,14 @@ h2 {
   font-size: 12px;
 }
 
-.banner-content a:hover {
+.home-banner .banner-content a:hover {
   border: 2px solid #4e9525;
   margin: -2px;
   background-color: transparent;
   transition: .2s;
 }
 
-.banner-content span { font-size: 8px; }
+.home-banner .banner-content span { font-size: 8px; }
 
 /* Services Section */
 .services { padding: 34px 0 102px 0; }
