@@ -210,26 +210,26 @@ nav a:hover:not(.active) {
   color: #fff;
 }
 
-.home-banner .banner-content p:nth-of-type(1) {
+.home-banner p:nth-of-type(1) {
   color: #fbd341;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-h2 {
+.home-banner h2 {
   width: 300px;
   padding: 8px 0;
   font-size: 44px;
   font-weight: 600;
 }
 
-.home-banner .banner-content p:nth-of-type(2) {
+.home-banner p:nth-of-type(2) {
   padding-bottom: 17px;
   font-size: 14px;
 }
 
-.home-banner .banner-content a {
+.home-banner a {
   padding: 8px 19px;
   border-radius: 2px;
   background-color: #4e9525;
@@ -237,14 +237,14 @@ h2 {
   font-size: 12px;
 }
 
-.home-banner .banner-content a:hover {
+.home-banner a:hover {
   border: 2px solid #4e9525;
   margin: -2px;
   background-color: transparent;
   transition: .2s;
 }
 
-.home-banner .banner-content span { font-size: 8px; }
+.home-banner span { font-size: 8px; }
 
 /* Services Section */
 .services { padding: 34px 0 102px 0; }
@@ -760,6 +760,76 @@ h2 {
 
 .to-the-top button:hover { box-shadow: 0 1px 5px #fbd341; }
 .to-the-top span { display: none; }
+
+/* Contact Page Banner Section */
+.contact-banner {
+  background-image: url('https://via.placeholder.com/1920x1080/454545/454545?text=Banner');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-banner .banner-content {
+  padding: 220px 0 45px 0;;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-banner h2 {
+  padding: 8px 0;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.contact-banner p {
+  padding: 5px 0 4px 0;
+  font-size: 12px;
+}
+
+.contact-banner span { font-size: 11px; }
+.contact-banner span:first-of-type { padding-right: 4px; }
+.contact-banner a { color: rgba(255, 255, 255, .4); }
+
+.contact-banner a:hover {
+  color: #fff;
+  transform: translateX(2px);
+  transition: .2s;
+}
+
+/* Contact Page Banner Section */
+.gallery-banner {
+  background-image: url('https://via.placeholder.com/1920x1080/454545/454545?text=Banner');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery-banner .banner-content {
+  padding: 220px 0 45px 0;;
+  color: #fff;
+  text-align: center;
+}
+
+.gallery-banner h2 {
+  padding: 8px 0;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.gallery-banner p {
+  padding: 5px 0 4px 0;
+  font-size: 12px;
+}
+
+.gallery-banner span { font-size: 11px; }
+.gallery-banner span:first-of-type { padding-right: 4px; }
+.gallery-banner a { color: rgba(255, 255, 255, .4); }
+
+.gallery-banner a:hover {
+  color: #fff;
+  transform: translateX(2px);
+  transition: .2s;
+}
 
 /* Fading animation */
 .fade {
