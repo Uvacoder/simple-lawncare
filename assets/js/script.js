@@ -47,7 +47,10 @@ function toggleToTop() {
 
 // Slider Starts -------------------------------------
 var slideIndex = 1;
-showSlides(slideIndex);
+var slides = document.getElementsByClassName('slides');
+if (slides.length > 1) {
+  showSlides(slideIndex);
+}
 
 // Next/previous controls
 function plusSlides(n) {
@@ -60,7 +63,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var slides = document.getElementsByClassName('slides');
   var indicators = document.getElementsByClassName('indicator');
   if (n > slides.length) { slideIndex = 1 }
   if (n < 1) { slideIndex = slides.length }
