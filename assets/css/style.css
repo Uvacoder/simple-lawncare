@@ -42,43 +42,13 @@ button {
   cursor: pointer;
 }
 
-strong {
-  font-weight: bold;
-  font-family: inherit;
-  font-size: inherit;
-}
-
-em { font-style: italic; }
-
 img {
   width: auto;
   border: 0;
   vertical-align: middle;
 }
 
-sub,
-sup {
-  vertical-align: baseline;
-  position: relative;
-  font-size: 55%;
-  line-height: 0;
-}
-
-sup { top: -.7em; }
-sub { bottom: -.25em; }
-
-/* 1.2. Clear Fix ========================== */
-
-.cf:before,
-.cf:after {
-  display: table;
-  content: " ";
-}
-
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
-
-/*for all*/
+/* For all */
 body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -390,7 +360,8 @@ h2 {
 .see-more a:hover {
   margin: -2px;
   border: 2px solid #4e9525;
-  background-color: #4d4d4d;
+  background-color: #fbd341;
+  color: #4e9525;
   transition: .2s;
 }
 
@@ -457,7 +428,11 @@ h2 {
   color: #4e9525;
 }
 
-.welcome-content li:hover { background-color: #4e9525; }
+.welcome-content li:hover {
+  background-color: #4e9525;
+  transition: .5s;
+}
+
 .welcome-content li > a:hover { color: #fff; }
 
 .welcome-content a:hover > span {
@@ -584,6 +559,34 @@ h2 {
 .indicator:hover {
   background-color: #4e9525;
   transition: .2s;
+}
+
+/* Slider Section */
+.slideshow-container { position: relative; }
+
+/* Next & previous buttons */
+.testimonials .prev,
+.testimonials .next {
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  position: absolute;
+  top: 50%;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: .6s;
+  user-select: none;
+}
+
+.testimonials .prev { left: -32px; }
+.testimonials .next { right: -32px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.testimonials .prev:hover,
+.testimonials .next:hover {
+  color: #4e9525;
 }
 
 /* Blogs Section */
@@ -757,6 +760,17 @@ h2 {
 
 .to-the-top button:hover { box-shadow: 0 1px 5px #fbd341; }
 .to-the-top span { display: none; }
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 
 /*=================================
   main styling ends here
@@ -998,6 +1012,12 @@ footer .social-links a:hover {
   }
 
   .testimonials-flexbox { width: 100%; }
+
+  .testimonials .prev,
+  .testimonials .next {
+    display: none;
+  }
+
   .blog-flexbox { width: 100%; }
   .footer-flexbox { width: 100%; }
   footer .social-links { padding-top: 18px; }
