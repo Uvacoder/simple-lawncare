@@ -120,64 +120,64 @@
         <div class="wrapper">
           <h3>Gallery</h3>
           <div class="gallery-flex">
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(1)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image1" alt="Image 1">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(2)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image2" alt="Image 2">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(3)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image3" alt="Image 3">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(4)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image4" alt="Image 4">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(5)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image5" alt="Image 5">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(6)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image6" alt="Image 6">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(7)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image7" alt="Image 7">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(8)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image8" alt="Image 8">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
               </figcaption>
             </figure>
-            <figure>
-              <img src="https://via.placeholder.com/450x282/757575?text=Image" alt="Image">
+            <figure onclick="openModal(); currentImage(9)">
+              <img src="https://via.placeholder.com/450x282/757575?text=Image9" alt="Image 9">
               <figcaption>
                 Nature
                 <p>Beautiful Work</p>
@@ -186,6 +186,54 @@
           </div>
         </div>
       </section>
+      <!-- Lightbox -->
+      <div class="lightbox">
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()" title="Close">&times;</span>
+          <div class="modal-content">
+            <!-- Slides / Carousel -->
+            <figure class="myImages fade">
+              <div class="numbertext">1 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image1" alt="Image 1">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">2 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image2" alt="Image 2">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">3 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image3" alt="Image 3">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">4 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image4" alt="Image 4">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">5 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image5" alt="Image 5">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">6 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image6" alt="Image 6">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">7 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image7" alt="Image 7">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">8 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image8" alt="Image 8">
+            </figure>
+            <figure class="myImages fade">
+              <div class="numbertext">9 of 9</div>
+              <img src="https://via.placeholder.com/1920x1080?text=Image9" alt="Image 9">
+            </figure>
+            <!-- Next/previous controls -->
+            <a class="prev fa fa-caret-left" onclick="plusImages(-1)" title="Previous"></a>
+            <a class="next fa fa-caret-right" onclick="plusImages(1)" title="Next"></a>
+          </div>
+        </div>
+      </div>
       <!-- Newsletter Section -->
       <section class="newsletter">
         <div class="wrapper">
