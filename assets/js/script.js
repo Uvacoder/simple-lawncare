@@ -80,8 +80,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var indicators = document.getElementsByClassName('indicator');
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
   for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
@@ -167,5 +167,65 @@ function onFormSubmit() {
     // Reset the current form data
     document.querySelector('form').reset();
   }
+}
+// ---------------------------------------------------
+
+// Lightbox Starts -----------------------------------
+function openModal() {
+  document.getElementById('myModal').style.opacity = '1';
+  document.getElementById('myModal').style.transform = 'scale(1, 1)';
+}
+
+// Closes the Modal
+function closeModal() {
+  document.getElementById('myModal').style.opacity = '0';
+  document.getElementById('myModal').style.transform = 'scale(0, 0)';
+}
+
+var imageIndex = 1;
+var images = document.getElementsByClassName('myImages');
+if (images.length > 1) {
+  showImages(imageIndex);
+}
+
+// Next/previous controls
+function plusImages(n) {
+  showImages(imageIndex += n);
+}
+
+// Image controls
+function currentImage(n) {
+  showImages(imageIndex = n);
+}
+
+function showImages(n) {
+  if (n > images.length) { imageIndex = 1; }
+  if (n < 1) { imageIndex = images.length; }
+  for (var i = 0; i < images.length; i++) {
+    images[i].style.display = 'none';
+  }
+  images[imageIndex - 1].style.display = 'block';
+  // Key Events
+  document.onkeydown = function (evt) {
+    evt = evt || window.event;
+    // Escape key closes Modal
+    var isEscape = false;
+    isEscape = (evt.keyCode === 27);
+    if (isEscape) {
+      closeModal();
+    }
+    // Left key for Previous
+    var isLeft = false;
+    isLeft = (evt.keyCode === 37);
+    if (isLeft) {
+      plusImages(-1);
+    }
+    // Right key for Next
+    var isRight = false;
+    isRight = (evt.keyCode === 39);
+    if (isRight) {
+      plusImages(1);
+    }
+  };
 }
 // ---------------------------------------------------
