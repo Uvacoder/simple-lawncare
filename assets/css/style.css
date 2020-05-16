@@ -1419,7 +1419,7 @@ footer .social-links a:hover {
 
 /*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
-  .wrapper { width: 90%; }
+  .wrapper { width: 85%; }
   .top-bar { padding: 24px 0; }
   header .social-links { display: none; }
   header .search-area {  margin-right: 54px; }
