@@ -258,7 +258,8 @@ nav a:hover:not(.active) {
   transition: .2s;
 }
 
-.home-banner span { font-size: 8px; }
+.home-banner span { font-size: 0px; }
+.home-banner span::before { font-size: 8px;}
 
 /* Services Section */
 .services { padding: 34px 0 102px 0; }
@@ -444,12 +445,13 @@ nav a:hover:not(.active) {
   top: 50%;
   background-color: #4e9525;
   color: #fff;
-  font-size: 10px;
+  font-size: 0px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
+.welcome-content span::before { font-size: 10px;}
 .welcome-content li.active { background-color: #4e9525; }
 .welcome-content li.active a { color: #fff; }
 
@@ -604,6 +606,8 @@ nav a:hover:not(.active) {
   -o-transition: .2s;
   transition: .2s;
 }
+
+.indicators span { font-size: 0;}
 
 /* Slider Section */
 .slideshow-container { position: relative; }
@@ -846,7 +850,6 @@ nav a:hover:not(.active) {
   font-size: 12px;
 }
 
-.contact-banner span { font-size: 11px; }
 .contact-banner span:first-of-type { padding-right: 4px; }
 .contact-banner a { color: rgba(255, 255, 255, .4); }
 
@@ -887,9 +890,10 @@ nav a:hover:not(.active) {
   border-radius: 50%;
   background-color: #4e9525;
   color: #fff;
-  font-size: 12px;
+  font-size: 0px;
 }
 
+.details-flexbox span::before { font-size: 12px; }
 .details-flexbox .fa-map-marker { padding: 16px 18px; }
 .details-flexbox a[href] { color: #4e9525; }
 
@@ -1050,7 +1054,10 @@ nav a:hover:not(.active) {
   font-size: 12px;
 }
 
-.gallery-banner span { font-size: 11px; }
+.gallery-banner span,
+.contact-banner span { font-size: 0px; }
+.gallery-banner span::before,
+.contact-banner span::before { font-size: 11px; }
 .gallery-banner span:first-of-type { padding-right: 4px; }
 .gallery-banner a { color: rgba(255, 255, 255, .4); }
 
@@ -1181,7 +1188,7 @@ nav a:hover:not(.active) {
   color: #fff;
   cursor: pointer;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 0px;
   -webkit-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -1190,6 +1197,9 @@ nav a:hover:not(.active) {
   -ms-user-select: none;
   user-select: none;
 }
+
+.lightbox .prev::before,
+.lightbox .next::before {  font-size: 28px;}
 
 /* Position the "prev next button" to the right */
 .lightbox .prev { left: 0; }
@@ -1298,8 +1308,10 @@ footer figcaption {
 
 .footer-services span {
   margin-right: 6px;
-  font-size: 10px;
+  font-size: 0px;
 }
+
+.footer-services span::before { font-size: 10px; }
 
 .footer-services {
   margin-left: 36px;
@@ -1325,8 +1337,10 @@ footer figcaption {
   padding-top: 5px;
   position: absolute;
   left: 0%;
-  font-size: 10px;
+  font-size: 0px;
 }
+
+.contact-info span::before { font-size: 10px; }
 
 .office-hours { margin-left: 12px; }
 .office-hours li { padding-left: 12px; }
